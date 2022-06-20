@@ -72,6 +72,7 @@ public class UserServiceImpl implements UserService {
         if (user == null) {
             user = new User();
             Role roleAdmin = new Role("ROLE_ADMIN");
+            Role roleUser = new Role("ROLE_USER");
             List<Role> list = new ArrayList<>();
             list.add(roleAdmin);
             user.setUsername("admin");
@@ -80,5 +81,4 @@ public class UserServiceImpl implements UserService {
             userRepository.save(user);
         }
     }
-
 }

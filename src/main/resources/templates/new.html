@@ -22,13 +22,17 @@
     <input type="password" th:field="*{password}" id="password" required>
     <br>
     <br>
+    <th:block th:each="role : ${roles}">
+        <input type="checkbox" name="checkbox" th:value="${role.authority}">
+        <label th:text="${role.authority}">..</label><br><br>
+    </th:block>
 
-        <input type="checkbox" name="checkbox" value="ROLE_USER">
-        USER
-        <br>
-        <br>
-        <input type="checkbox" name="checkbox" value="ROLE_ADMIN">
-        ADMIN
+<!--        <input type="checkbox" name="checkbox" value="ROLE_USER">-->
+<!--        USER-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        <input type="checkbox" name="checkbox" value="ROLE_ADMIN">-->
+<!--        ADMIN-->
 <!--    </div>-->
 
     <br>

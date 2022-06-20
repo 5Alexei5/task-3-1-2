@@ -20,15 +20,13 @@
     <br>
     <br>
     <label for="password">Enter password:</label>
-    <input name="password" th:field="*{password}" id="password">
+    <input type="password" name="password" th:field="*{password}" id="password">
     <br>
     <br>
-    <input type="checkbox" name="checkbox" value="ROLE_USER">
-    USER
-    <br>
-    <br>
-    <input type="checkbox" name="checkbox" value="ROLE_ADMIN">
-    ADMIN
+    <th:block th:each="role : ${roles}">
+        <input type="checkbox" name="checkbox" th:value="${role.authority}">
+        <label th:text="${role.authority}">..</label><br><br>
+    </th:block>
     <br>
     <br>
     <input type="submit" value="Update">
