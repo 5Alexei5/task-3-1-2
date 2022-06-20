@@ -75,6 +75,7 @@ public class UserServiceImpl implements UserService {
             Role roleUser = new Role("ROLE_USER");
             List<Role> list = new ArrayList<>();
             list.add(roleAdmin);
+            list.add(roleUser);
             user.setUsername("admin");
             user.setRoles(list);
             user.setPassword("$2a$12$iFnXFFHtMk/0RuCoaijFc.i77pubSJlVgqe3E1IJn2zea1z7PBr9S");
